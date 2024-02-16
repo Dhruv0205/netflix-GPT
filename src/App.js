@@ -1,10 +1,9 @@
-import './App.css';
+// yimport './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="bg-black text-white font-bold text-center ">
-      namaste doston, lets build netflix gpt!
-    </div>
+    <Body />
   );
 }
 
