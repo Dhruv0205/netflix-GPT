@@ -5,6 +5,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {addUser, removeUser} from "../utils/userSlice";
+import { LOGO, PROFILE } from "../utils/constant";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -41,9 +42,9 @@ const Header = () => {
 
 
   return (
-    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-white z-10 flex justify-between">
       <img
-        src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+        src = {LOGO}
         alt="logo"
         className="w-44 "
       />
@@ -52,10 +53,10 @@ const Header = () => {
         <img
           className="p-1 h-12 w-16"
           class="profile-icon"
-          src="https://occ-0-4344-2186.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABYh1GXyzHI-IqH5gUm3DHnqwmPCTLO5rmui76NzrDHgzMA7or4fZQUjLBsrXzx0JiwagUlQSf7Wiu4yI-A4hfpwleGn8R3g.png?r=54d"
-          alt=""
+          src= {PROFILE}
+          alt="profile"
         />
-        <button className="font-bold" onClick={clickHandler}>
+        <button className="font-bold text-white" onClick={clickHandler}>
           logout
         </button>
       </div>
